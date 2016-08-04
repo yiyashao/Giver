@@ -22,24 +22,16 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("Test: ","Gets to the ON CREATE");
         //declear the buttons and setup listeners
-        final Button button = (Button) findViewById(R.id.btnGive);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "You clicked the button", Toast.LENGTH_SHORT).show();
+        naviWant = (Button) findViewById(R.id.btnWant);
+        naviWant.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Log.d("Test: ","Gets to the listener");
                 goToWantForm();
             }
         });
-
-//        naviWant = (Button) findViewById(R.id.btnWant);
-//        naviWant.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//                Log.d("Test: ","Gets to the listener");
-//                goToWantForm();
-//            }
-//        });
-        naviGive = (Button) findViewById(R.id.btnWant);
+        naviGive = (Button) findViewById(R.id.btnGive);
         naviGive.setOnClickListener(new View.OnClickListener() {
 
             @Override
